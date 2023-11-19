@@ -1,0 +1,212 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+    line-height: 1.6;
+}
+
+.intro {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.carousel-caption {
+    background-color: #00000080;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-caption h5 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #00000080;
+}
+
+
+.intro img {
+    width: 100%;
+    height: auto;
+}
+
+.intro .tagline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    box-shadow: 2px 2px 10px #0000004d;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 4px #00000080;
+}
+
+.title-color {
+    color: #f8f9fa;
+}
+
+.title2-color{
+    color: #006400;
+}
+.title3-color{
+    color: #0000FF;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.article-box {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 5px solid #191970;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.article-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+footer {
+    background-color: #2a2a2a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 5px solid #191970;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tech-article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.tech-image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.contact-form form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contact-form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #191970;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #41479b;
+}
+
+main {
+    padding: 4rem 1rem;
+}
+
+@keyframes rotatePlaneRight {
+    0% { transform: translateX(0) rotate(0); }
+    25% { transform: translateX(50px) rotate(45deg); }
+    50% { transform: translateX(100px) rotate(90deg); }
+    75% { transform: translateX(50px) rotate(135deg); }
+    100% { transform: translateX(0) rotate(180deg); }
+}
+
+@keyframes rotatePlaneLeft {
+    0% { transform: translateX(0) rotate(0); }
+    25% { transform: translateX(-50px) rotate(-45deg); }
+    50% { transform: translateX(-100px) rotate(-90deg); }
+    75% { transform: translateX(-50px) rotate(-135deg); }
+    100% { transform: translateX(0) rotate(-180deg); }
+}
+
+.plane-animation {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.plane {
+    width: 150px;
+}
+
+.plane1 {
+    animation: rotatePlaneRight 5s infinite linear;
+}
+
+.plane2 {
+    animation: rotatePlaneLeft 5s infinite linear;
+}
+
+.link {
+    color: #8063cf;
+    text-decoration: none;
+    border-bottom: 2px solid #191970;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .tech-article {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .intro img {
+        display: none;
+    }
+
+    .intro .tagline {
+        position: static;
+        transform: none;
+        background-color: #00000080;
+        color: black;
+        margin: 20px;
+        box-shadow: none;
+        }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
